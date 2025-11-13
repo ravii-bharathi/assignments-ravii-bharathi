@@ -1,0 +1,84 @@
+
+#file-output
+ravi@ub22:~/repos/assignment-1-ravii-bharathi/finder-app$ file writer.o
+writer.o: ELF 64-bit LSB relocatable, ARM aarch64, version 1 (SYSV), with debug_info, not stripped
+
+
+#sysroot
+ravi@ub22:~/repos/assignment-1-ravii-bharathi/finder-app$ aarch64-none-linux-gnu-gcc -print-sysroot
+/home/ravi/toolchain/arm-gnu-toolchain-14.3.rel1-x86_64-aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc
+
+
+#assignment-result for finder-test.sh
+ravi@ub22:~/repos/assignment-1-ravii-bharathi/finder-app$ ./finder-test.sh 
+Using default value AELD_IS_FUN for string to write
+Using default value 10 for number of files to write
+Writing 10 files containing string AELD_IS_FUN to /tmp/aeld-data
+/tmp/aeld-data created
+rm -f writer writer.o
+cc -c writer.c -o writer.o
+cc writer.o -o writer
+./finder.sh: line 8: [: missing `]'
+The number of files are 10 and the number of matching lines are 10
+success
+
+
+
+#assignment-2-result for full-test.sh
+ravi@ub22:~/repos/assignment-1-ravii-bharathi$ ./full-test.sh 
+starting test with SKIP_BUILD="" and DO_VALIDATE=""
+Running test with user ravi
+-- Generating ;/home/ravi/repos/assignment-1-ravii-bharathi/assignment-autotest/test/assignment1/Test_hello_Runner.c;/home/ravi/repos/assignment-1-ravii-bharathi/assignment-autotest/test/assignment1/Test_assignment_validate_Runner.c from test/assignment1/Test_hello.c;test/assignment1/Test_assignment_validate.c
+-- Building executable including ;/home/ravi/repos/assignment-1-ravii-bharathi/assignment-autotest/test/assignment1/Test_hello_Runner.c;/home/ravi/repos/assignment-1-ravii-bharathi/assignment-autotest/test/assignment1/Test_assignment_validate_Runner.c test/assignment1/Test_hello.c;test/assignment1/Test_assignment_validate.c and ../examples/autotest-validate/autotest-validate.c
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ravi/repos/assignment-1-ravii-bharathi/build
+[ 25%] Building C object assignment-autotest/Unity/src/CMakeFiles/unity.dir/unity.c.o
+[ 25%] Linking C static library libunity.a
+[ 25%] Built target unity
+[ 25%] Generating ../../assignment-autotest/test/assignment1/Test_hello_Runner.c, ../../assignment-autotest/test/assignment1/Test_assignment_validate_Runner.c, ../../assignment-autotest/test/unity_runner.c
+Test files for auto dependency generation test/assignment1/Test_hello.c test/assignment1/Test_assignment_validate.c
+Autogenerating runner for test/assignment1/Test_hello.c
+Autogenerating runner for test/assignment1/Test_assignment_validate.c
+Autogenerating test/unity_runner.c
+[ 25%] Building C object assignment-autotest/CMakeFiles/assignment-autotest.dir/test/assignment1/Test_hello.c.o
+[ 25%] Building C object assignment-autotest/CMakeFiles/assignment-autotest.dir/test/assignment1/Test_assignment_validate.c.o
+[ 25%] Building C object assignment-autotest/CMakeFiles/assignment-autotest.dir/test/assignment1/Test_hello_Runner.c.o
+[ 25%] Building C object assignment-autotest/CMakeFiles/assignment-autotest.dir/test/assignment1/Test_assignment_validate_Runner.c.o
+[ 25%] Building C object assignment-autotest/CMakeFiles/assignment-autotest.dir/__/examples/autotest-validate/autotest-validate.c.o
+[ 25%] Building C object assignment-autotest/CMakeFiles/assignment-autotest.dir/test/unity_runner.c.o
+[ 25%] Linking C executable assignment-autotest
+[ 25%] Built target assignment-autotest
+/home/ravi/repos/assignment-1-ravii-bharathi/assignment-autotest/test/assignment1/Test_hello.c:6:test_hello:INFO: Hello!  Your unity setup is working!
+/home/ravi/repos/assignment-1-ravii-bharathi/assignment-autotest/test/assignment1/Test_hello.c:4:test_hello:PASS
+
+-----------------------
+1 Tests 0 Failures 0 Ignored 
+OK
+/home/ravi/repos/assignment-1-ravii-bharathi/assignment-autotest/test/assignment1/Test_assignment_validate.c:9:test_assignment_validate:PASS
+
+-----------------------
+1 Tests 0 Failures 0 Ignored 
+OK
+Executing assignment test script
+~/repos/assignment-1-ravii-bharathi/assignment-autotest/test/assignment2 ~/repos/assignment-1-ravii-bharathi
+~/repos/assignment-1-ravii-bharathi/finder-app ~/repos/assignment-1-ravii-bharathi/assignment-autotest/test/assignment2 ~/repos/assignment-1-ravii-bharathi
+rm -f writer writer.o
+cc -c writer.c -o writer.o
+cc writer.o -o writer
+usage: ./writer <file> <string>
+usage: ./writer <file> <string>
+Performing make clean
+rm -f writer writer.o
+Using default value AELD_IS_FUN for string to write
+Using default value 10 for number of files to write
+Writing 10 files containing string AELD_IS_FUN to /tmp/aeld-data
+/tmp/aeld-data created
+rm -f writer writer.o
+cc -c writer.c -o writer.o
+cc writer.o -o writer
+./finder.sh: line 8: [: missing `]'
+The number of files are 10 and the number of matching lines are 10
+success
+Test of assignment assignment2 complete with success
+
